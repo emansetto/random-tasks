@@ -50,6 +50,7 @@ nav
 {
     @media(max-width: 35em)
 {
+    --gap: 3em;
     position: fixed;
     inset: 0 0 0 30%;
     align-items:start;
