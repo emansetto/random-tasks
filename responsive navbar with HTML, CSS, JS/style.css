@@ -1,0 +1,87 @@
+body
+{
+    font-size: 16px;
+    background-image: url(images/moon.jpg);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.flex
+{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap , 1rem);
+}
+.grid
+{
+    display: grid;
+    gap: var(--gap,1rem);
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+.logo
+{
+    margin: 2rem;
+}
+/* header
+{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/moon.jpg);
+    background-size: cover;
+} */
+
+nav
+{
+    align-items: center;
+    justify-content: center;
+}
+.primary-navigation 
+{
+    @media(max-width: 35em)
+{
+    position: fixed;
+    inset: 0 0 0 30%;
+    align-items:start;
+    justify-content: start;
+    align-self: end;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+}
+    
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    list-style: none;
+    /* margin-inline: 5%; */
+    text-decoration: none;
+    background: hsl(0, 0%, 0%, 0.57);
+    padding: 2rem;
+
+    @supports(backdrop-filter: blur(1rem))
+    {
+.primary-navigation
+{
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+
+}
+    }
+}
+
+.primary-navigation a > span [aria-hidden= "true"]
+{
+    font-weight: 700;
+    margin-inline-end: .75em;
+}
+
