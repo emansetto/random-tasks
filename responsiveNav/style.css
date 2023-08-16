@@ -2,6 +2,7 @@ body
 {
     font-size: 16px;
     background-image: url(images/moon.jpg);
+    overflow-x: hidden;
 }
 *
 {
@@ -52,12 +53,16 @@ nav
 {
     --gap: 3em;
     position: fixed;
+    z-index: 1000;
     inset: 0 0 0 30%;
     align-items:start;
     justify-content: start;
     align-self: end;
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
+    transform:translateX(100%);
+
+
 }
     
     align-items: center;
@@ -79,10 +84,37 @@ nav
 }
     }
 }
+.primary-navigation[data-visible="true"]
+{
+    transform: translateX(0%);
+}
 
 .primary-navigation a > span [aria-hidden= "true"]
 {
     font-weight: 700;
     margin-inline-end: .75em;
 }
+
+.mobile-nav-toggle
+{
+    display: none;
+    background-color: transparent;
+}
+   
+    @media(max-width: 35em) {
+        .mobile-nav-toggle{
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            width: 2rem;
+            background: url(images/hamburger.svg) ; 
+            background-repeat: no-repeat; 
+            /* border: 0; */
+           aspect-ratio: 1;
+            top: 2rem;
+            right: 2rem;
+        }
+     
+    }
+   
 
