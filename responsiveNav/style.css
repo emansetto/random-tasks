@@ -107,14 +107,14 @@ nav
             position: absolute;
             z-index: 9999;
             width: 2rem;
-            background: url(images/hamburger.svg) ; 
+            background-image: url(images/hamburger.svg) ; 
+            background-size: cover;
             background-repeat: no-repeat; 
-            /* border: 0; */
+            border: 0;
            aspect-ratio: 1;
             top: 2rem;
             right: 2rem;
         }
-     
     }
    
 
